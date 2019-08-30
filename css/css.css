@@ -1,0 +1,19 @@
+html {
+    background-color: antiquewhite;
+}
+.warp {
+    width: 500px;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+.warp1 {
+    width: 500px;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}

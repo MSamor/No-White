@@ -14,14 +14,14 @@ function line() { //添加一行
     var div = document.createElement('div');
     div.style.display = 'flex';
     $(warp).prepend(div)
-    if ($(warp).children().length>9){
+    if ($(warp).children().length > 9) {
         //这里遍历最后一行可以判断是否有黑块
         $(warp).children().eq(9).nextAll().remove();
     }
     var topY = 0
     timer = setInterval(() => {
         topY += 2;
-        div.style.height = topY+'px';
+        div.style.height = topY + 'px';
         if (topY == 100) {
             topY = 0;
             var black = random()
@@ -36,10 +36,12 @@ function line() { //添加一行
                 $(divs).on('touchstart', function () {
                     if ($(this).attr('id') == 'point') {
                         console.log('得分')
+                        $('audio').get(0).load()
+                        $('audio').get(0).play()
                         score++;
                         $('.score span').text(score)
                         $(this).css('backgroundColor', 'white')
-                    }else{
+                    } else {
                         alert('点到白块了！！')
                         clearInterval(timer)
                     }
@@ -50,7 +52,7 @@ function line() { //添加一行
             line()
         }
     }, 1);
-    
+
 }
 
 line()

@@ -33,7 +33,7 @@ function line() { //添加一行
                     divs.style.backgroundColor = 'black';
                     $(divs).attr('id', 'point')
                 }
-                $(divs).on('click', function () {
+                $(divs).on('touchstart', function () {
                     if ($(this).attr('id') == 'point') {
                         console.log('得分')
                         $(this).css('backgroundColor', 'white')

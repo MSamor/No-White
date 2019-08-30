@@ -20,7 +20,7 @@ function line() { //添加一行
     }
     var topY = 0
     timer = setInterval(() => {
-        topY += 1;
+        topY += 2;
         div.style.height = topY+'px';
         if (topY == 100) {
             topY = 0;

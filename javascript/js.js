@@ -3,7 +3,7 @@ var body = document.getElementsByTagName('body')[0]
 body.addEventListener('click', function (e) {
     //    console.log(e)
 })
-
+var score = 0;
 function random() {
     var rander = parseInt(Math.random() * 10);
     rander = rander >= 5 ? rander - 5 : rander
@@ -36,9 +36,11 @@ function line() { //添加一行
                 $(divs).on('touchstart', function () {
                     if ($(this).attr('id') == 'point') {
                         console.log('得分')
+                        score++;
+                        $('.score span').text(score)
                         $(this).css('backgroundColor', 'white')
                     }else{
-                        alert('error')
+                        alert('点到白块了！！')
                         clearInterval(timer)
                     }
                 })

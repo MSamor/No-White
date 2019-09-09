@@ -35,15 +35,24 @@ function line() { //添加一行
                 }
                 $(divs).on('touchstart', function () {
                     if ($(this).attr('id') == 'point') {
-                        console.log('得分')
                         $('audio').get(0).load()
                         $('audio').get(0).play()
                         score++;
                         $('.score span').text(score)
                         $(this).css('backgroundColor', 'white')
                     } else {
-                        alert('点到白块了！！')
-                        clearInterval(timer)
+                        var r = alert("得分："+score+" 游戏结束，点击确认重新开始！");
+                        // if (r == true) {
+                            clearInterval(timer);
+                        //     score = 0;
+                            $('.score span').text(score)
+                            $(warp).children().remove();
+                            line();
+                        // } else {
+                            // clearInterval(timer);
+                            // $('.warp1').css('display','none')
+                        // }
+                        
                     }
                 })
                 div.appendChild(divs)

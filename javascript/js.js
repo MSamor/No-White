@@ -42,17 +42,11 @@ function line() { //添加一行
                         $(this).css('backgroundColor', 'white')
                     } else {
                         var r = alert("得分："+score+" 游戏结束，点击确认重新开始！");
-                        // if (r == true) {
                             clearInterval(timer);
-                        //     score = 0;
+                            score = 0;
                             $('.score span').text(score)
                             $(warp).children().remove();
-                            line();
-                        // } else {
-                            // clearInterval(timer);
-                            // $('.warp1').css('display','none')
-                        // }
-                        
+                            line();    
                     }
                 })
                 div.appendChild(divs)
